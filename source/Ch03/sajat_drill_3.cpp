@@ -43,8 +43,11 @@ int main()
 	{
 		cout<<"If the friend is female, write “If you see "<<friend_name<<" please ask her to call me.”"<<endl;
 	}
-
-
+	
+	if(friend_sex!='m' &&  friend_sex!='f')
+	{
+		cout<<"Bad Input!"<<endl;
+	}
 
 	int age=0;
 

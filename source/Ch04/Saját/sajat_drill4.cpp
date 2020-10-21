@@ -1,17 +1,21 @@
 #include "std_lib_facilities.h"
 
+	const int centimeter=100;
+	const int in_mertekegy=2.54;
+	const int ft_mertekegy=12*in_mertekegy;
+
 	double atvaltas(double fszam, string fmertek)
 		{
 			double backvalue=0;
 
 				if (fmertek=="cm")
-					backvalue=fszam/100;
+					backvalue=fszam/centimeter;
 				
 				else if (fmertek=="in")
-					backvalue=(fszam*100)/2.54;
+					backvalue=(fszam*centimeter)/in_mertekegy;
 				
 				else if (fmertek=="ft")
-					backvalue=((fszam*12)*2.54)/100;
+					backvalue=((fszam*ft_mertekegy)/centimeter);
 				
 				else
 					backvalue=fszam;
@@ -21,7 +25,7 @@
 		}
 
 int main()
-{
+{	
 	double szam=0;
 	vector<double> szam_v;
 	string mertekegyseg="";

@@ -176,11 +176,11 @@ try
     while (cin) {
         Token t = ts.get();
         if (t.kind == 'x') break; // 'q' for quit
-        if (t.kind == '=')        // ';' for "print now"
-            cout << "=" << val << '\n';
-        else
+        if (t.kind == '=')      // ';' for "print now"
+            cout << "=" << val << '\n'; 
+        else 
             ts.putback(t);
-        val = expression();
+        val = expression(); 
     }
     keep_window_open();
 }
